@@ -1,4 +1,4 @@
-const nextPorto = () => {
+function nextPorto() {
   let elemen = document.getElementsByClassName("card-porto");
   let IndexElemenSelanjutnyaSekarang;
 
@@ -27,9 +27,9 @@ const nextPorto = () => {
     elemen.item(IndexElemenSelanjutnyaSekarang).classList.add("item3");
     elemen.item(IndexElemenSelanjutnyaSekarang).classList.remove("d-none");
   }
-};
+}
 
-const previousPorto = () => {
+function previousPorto() {
   let elemen = document.getElementsByClassName("card-porto");
   let IndexElemenSebelumnyaSekarang;
 
@@ -58,9 +58,9 @@ const previousPorto = () => {
     elemen.item(IndexElemenSebelumnyaSekarang).classList.add("item1");
     elemen.item(IndexElemenSebelumnyaSekarang).classList.remove("d-none");
   }
-};
+}
 
-const checklengthParagraphPorto = () => {
+function checklengthParagraphPorto() {
   const paragaphContainer = $(".flip-card-back");
   let tinggiElemen = 0;
   let setengahTinggiElemen = 0;
@@ -76,7 +76,7 @@ const checklengthParagraphPorto = () => {
         $(valueContainer).children("p:first-child").css("margin-top", setengahTinggiElemen);
         $(valueContainer).children("p:last-child").css("margin-bottom", setengahTinggiElemen);
 
-        console.log(valueContainer.children.item(0));
+        // console.log(valueContainer.children.item(0));
       }
 
       if (valueContainer.children.length - 1 === i && tinggiElemen >= 50 && tinggiElemen <= 249) {
@@ -86,7 +86,7 @@ const checklengthParagraphPorto = () => {
         $(valueContainer).children("p:first-child").css("margin-top", setengahTinggiElemen);
         $(valueContainer).children("p:last-child").css("margin-bottom", setengahTinggiElemen);
 
-        console.log(valueContainer.children.item(0));
+        // console.log(valueContainer.children.item(0));
       }
 
       if (valueContainer.children.length - 1 === i && tinggiElemen >= 255) {
@@ -96,13 +96,13 @@ const checklengthParagraphPorto = () => {
         $(valueContainer).children("p:first-child").css("margin-top", setengahTinggiElemen);
         $(valueContainer).children("p:last-child").css("margin-bottom", setengahTinggiElemen);
 
-        console.log(valueContainer.children.item(0));
+        // console.log(valueContainer.children.item(0));
       }
 
-      console.log(tinggiElemen);
+      // console.log(tinggiElemen);
     });
   });
-};
+}
 
-// eksport
-module.exports = { nextPorto, previousPorto, checklengthParagraphPorto };
+// export
+export { nextPorto, previousPorto, checklengthParagraphPorto };

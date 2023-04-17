@@ -295,7 +295,7 @@ main .jumbotron {
   margin: 3% auto;
   display: grid;
   justify-items: center;
-  grid-template-areas:
+  grid-template-areas:  
     "service1 service2"
     "service3 service4";
   gap: 20% 0;
