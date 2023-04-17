@@ -283,7 +283,7 @@ main .jumbotron {
 .services {
   width: 100%;
   background-color: #f0efef;
-  padding: 5% 2%;
+  padding: 5% 2% 15% 2%;
 }
 
 .services h2 {
@@ -295,7 +295,7 @@ main .jumbotron {
   margin: 3% auto;
   display: grid;
   justify-items: center;
-  grid-template-areas:  
+  grid-template-areas:
     "service1 service2"
     "service3 service4";
   gap: 20% 0;
@@ -357,4 +357,22 @@ main .jumbotron {
 
 .service4 {
   grid-area: service4;
+}
+
+.wave-upper-footer {
+  width: 100%;
+  background-color: #f0efef;
+  display: flex;
+}
+
+.width-upper-footer img {
+  width: 100%;
+  height: 0;
+}
+
+footer {
+  width: 100%;
+  min-height: 90vh;
+  background-color: #71706d;
+  margin-top: -1%;
 }
