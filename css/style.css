@@ -1,0 +1,360 @@
+/* Import */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* Default style */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+header {
+  width: 100%;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  z-index: 1000;
+}
+
+header .container-logo {
+  margin-left: 2%;
+}
+
+header nav {
+  width: 50%;
+  transform: translateX(300%);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+header li {
+  list-style: none;
+}
+
+header a {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+header a:hover {
+  color: #ffb83d;
+}
+
+header .humberger-menu {
+  width: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .jumbotron {
+  width: 100%;
+  padding: 2% 0 10% 0;
+  background-color: #f0efef;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.jumbotron .kotak-1 {
+  width: 40%;
+  min-width: 300px;
+  height: 500px;
+  background-color: #ffb83d;
+  border-radius: 0 10% 10% 0;
+  margin-top: 2%;
+}
+
+.jumbotron .text-jumbotron {
+  position: relative;
+  top: 20%;
+  right: 25%;
+}
+
+.text-jumbotron p {
+  font-size: 1.2em;
+  margin-top: 2%;
+}
+
+.jumbotron .kotak-2 {
+  width: 30%;
+  min-width: 300px;
+  height: 500px;
+  background-color: #eb8207;
+  margin-top: 25%;
+  justify-self: end;
+  border-radius: 10% 0 0 10%;
+}
+
+.about-me {
+  width: 100%;
+  padding: 5% 5% 10% 10%;
+  background-color: #71706d;
+  position: relative;
+}
+
+.about-me h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.about-me .card-kiri {
+  max-width: 50%;
+  margin-top: 5%;
+  background-color: #d9d9d9;
+  padding: 5% 5% 20% 5%;
+  border-radius: 20px;
+  box-shadow: 5px 10px 50px 12px rgba(0, 0, 0, 30%);
+}
+
+.about-me .card-kiri h3 {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+
+.about-me .card-kiri p {
+  margin-top: 3%;
+  font-size: 1.2em;
+}
+
+.card-kiri .container-gambar {
+  width: 100%;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 5px;
+}
+
+.card-kiri img {
+  width: 50%;
+}
+
+/* rule based on attribute selector */
+.card-kiri img[alt*="Logo PHPMyAdmin"] {
+  width: 100%;
+}
+
+.card-kanan {
+  max-width: 35%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+}
+
+.card-kanan img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.portofolio {
+  width: 100%;
+  background-color: #71706d;
+  padding: 7% 0;
+}
+
+.portofolio h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.container-slide-portofolio {
+  width: 100%;
+  margin-top: 8%;
+  display: grid;
+  grid-template-areas: "item1 item2 item3";
+  grid-template-columns: repeat(3, 1fr);
+  position: relative;
+}
+
+.container-slide-portofolio .card-porto {
+  width: 80%;
+  min-height: 500px;
+  background-color: #fff;
+  transition: transform 400ms ease-out;
+}
+
+.banner-card-porto {
+  width: 100%;
+  height: 50%;
+  min-height: 300px;
+}
+
+.container-slide-portofolio .card-porto h3 {
+  width: 80%;
+  text-align: center;
+  margin: 10% auto 0 auto;
+  font-weight: 800;
+  font-size: 1.3em;
+}
+
+.card-porto p {
+  width: 80%;
+  margin: 5% 0 0 5%;
+}
+
+.card-porto .container-teknologi-porto {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  justify-items: center;
+  gap: 5px;
+}
+
+.img-teknologi-porto {
+  margin-top: 20%;
+  width: 40%;
+}
+
+.item1 {
+  grid-area: item1;
+  opacity: 50%;
+  justify-self: start;
+  transform: translateX(-25%);
+}
+
+#item2 {
+  width: 100%;
+  grid-area: item2;
+  justify-self: center;
+  padding-bottom: 15%;
+}
+
+.item3 {
+  grid-area: item3;
+  opacity: 50%;
+  justify-self: end;
+  transform: translateX(25%);
+}
+
+.d-none {
+  display: none;
+}
+
+.nav-porto {
+  width: 5%;
+  min-height: 70px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.left {
+  position: absolute;
+  top: 20%;
+  left: 1.5%;
+  z-index: 3;
+}
+
+.right {
+  position: absolute;
+  top: 20%;
+  right: 1.5%;
+  z-index: 3;
+}
+
+.services {
+  width: 100%;
+  background-color: #f0efef;
+  padding: 5% 2%;
+}
+
+.services h2 {
+  text-align: center;
+}
+
+.container-services {
+  width: 90%;
+  margin: 3% auto;
+  display: grid;
+  justify-items: center;
+  grid-template-areas:
+    "service1 service2"
+    "service3 service4";
+  gap: 20% 0;
+}
+
+.flip-card {
+  width: 70%;
+  height: 100%;
+  min-height: 400px;
+}
+
+.title {
+  font-size: 1.8em;
+  font-weight: 900;
+  text-align: center;
+}
+
+.flip-card-front p:last-child {
+  width: 95%;
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 5% auto 0 auto;
+}
+
+.flip-card-back {
+  overflow: auto;
+}
+
+.padding-10 {
+  padding: 10% 0 10% 0;
+}
+
+.padding-90 {
+  padding: 90% 0 10% 0;
+}
+
+.margin-top-10 {
+  /* margin-top: 1vh; */
+}
+
+.flip-card-back p:not(.title) {
+  width: 80%;
+  margin: 2% auto 0 auto;
+  font-size: 1.2em;
+  text-align: justify;
+}
+
+.service1 {
+  grid-area: service1;
+}
+
+.service2 {
+  grid-area: service2;
+}
+
+.service3 {
+  grid-area: service3;
+}
+
+.service4 {
+  grid-area: service4;
+}
