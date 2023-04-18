@@ -372,7 +372,63 @@ main .jumbotron {
 
 footer {
   width: 100%;
-  min-height: 90vh;
   background-color: #71706d;
   margin-top: -1%;
+  position: relative;
+  padding-bottom: 1.5%;
+}
+
+footer .title-footer {
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.container-contact {
+  width: 90%;
+  margin: 5% auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.container-contact h5 {
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: capitalize;
+}
+
+.container-contact h5::before {
+  content: url(../assets/icon/circle-solid.svg);
+  display: inline-block;
+  width: 1.5%;
+  margin-right: 1%;
+}
+
+.container-image-contact {
+  width: 50%;
+  margin: 3% 0 0 2%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(20px, 1fr));
+}
+
+.container-image-contact img {
+  width: 50%;
+}
+
+.garis-batas-copyright {
+  width: 100%;
+  min-height: 3px;
+  border: none;
+  background-color: #DCE9F2;
+}
+
+.copyright {
+  width: 100%;
+  margin: 3% 0;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 600;
+  text-transform: capitalize;
 }

@@ -1,4 +1,4 @@
-function nextPorto() {
+export function nextPorto() {
   let elemen = document.getElementsByClassName("card-porto");
   let IndexElemenSelanjutnyaSekarang;
 
@@ -29,7 +29,7 @@ function nextPorto() {
   }
 }
 
-function previousPorto() {
+export function previousPorto() {
   let elemen = document.getElementsByClassName("card-porto");
   let IndexElemenSebelumnyaSekarang;
 
@@ -60,7 +60,7 @@ function previousPorto() {
   }
 }
 
-function checklengthParagraphPorto() {
+export function checklengthParagraphPorto() {
   const paragaphContainer = $(".flip-card-back");
   let tinggiElemen = 0;
   let setengahTinggiElemen = 0;
@@ -104,5 +104,11 @@ function checklengthParagraphPorto() {
   });
 }
 
-// export
-export { nextPorto, previousPorto, checklengthParagraphPorto };
+export function generateTahunSekarang() {
+  const elemenMuncul = document.getElementById("tahun-sekarang");
+
+  elemenMuncul.innerHTML = new Date().getFullYear();
+}
+
+// export singgle
+// export { nextPorto, previousPorto, checklengthParagraphPorto };
