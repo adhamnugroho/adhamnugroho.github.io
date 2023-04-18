@@ -71,7 +71,7 @@ export function checklengthParagraphPorto() {
 
       if (valueContainer.children.length - 1 === i && tinggiElemen <= 49) {
         setengahTinggiElemen = tinggiElemen * 0.9;
-        console.log(setengahTinggiElemen);
+        // console.log(setengahTinggiElemen);
 
         $(valueContainer).children("p:first-child").css("margin-top", setengahTinggiElemen);
         $(valueContainer).children("p:last-child").css("margin-bottom", setengahTinggiElemen);
@@ -81,7 +81,7 @@ export function checklengthParagraphPorto() {
 
       if (valueContainer.children.length - 1 === i && tinggiElemen >= 50 && tinggiElemen <= 249) {
         setengahTinggiElemen = tinggiElemen * 0.35;
-        console.log(setengahTinggiElemen);
+        // console.log(setengahTinggiElemen);
 
         $(valueContainer).children("p:first-child").css("margin-top", setengahTinggiElemen);
         $(valueContainer).children("p:last-child").css("margin-bottom", setengahTinggiElemen);
@@ -91,7 +91,7 @@ export function checklengthParagraphPorto() {
 
       if (valueContainer.children.length - 1 === i && tinggiElemen >= 255) {
         setengahTinggiElemen = tinggiElemen * 0.04;
-        console.log(setengahTinggiElemen);
+        // console.log(setengahTinggiElemen);
 
         $(valueContainer).children("p:first-child").css("margin-top", setengahTinggiElemen);
         $(valueContainer).children("p:last-child").css("margin-bottom", setengahTinggiElemen);
@@ -110,5 +110,20 @@ export function generateTahunSekarang() {
   elemenMuncul.innerHTML = new Date().getFullYear();
 }
 
-// export singgle
+export function hideUnhideNav() {
+  const navElemen = document.querySelector("header nav");
+
+  navElemen.classList.toggle("unhideNav");
+  $(".fa-bars-staggered").toggle(100);
+  $(".fa-bars").toggle(100);
+}
+
+export function smoothScroll(event) {
+  event.preventDefault();
+
+  const href = $(this).attr("href");
+  $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
+}
+
+// export single
 // export { nextPorto, previousPorto, checklengthParagraphPorto };

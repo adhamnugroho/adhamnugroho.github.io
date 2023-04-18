@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", sans-serif;
   font-size: 16px;
@@ -19,6 +23,11 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: #000;
 }
 
 h2 {
@@ -45,6 +54,8 @@ header .container-logo {
 header nav {
   width: 50%;
   transform: translateX(300%);
+  -webkit-transition: all 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  transition: all 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 header nav ul {
@@ -70,11 +81,26 @@ header .humberger-menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.humberger-menu > input {
+  width: 100%;
+  height: 2.4em;
+  position: absolute;
+  opacity: 0;
+  z-index: 5;
+  cursor: pointer;
+}
+
+.unhideNav {
+  transform: translateX(0);
 }
 
 main .jumbotron {
   width: 100%;
-  padding: 2% 0 10% 0;
+  padding: 4% 0 10% 0;
   background-color: #f0efef;
   position: relative;
   display: grid;
@@ -113,7 +139,7 @@ main .jumbotron {
 
 .about-me {
   width: 100%;
-  padding: 5% 5% 10% 10%;
+  padding: 9% 5% 10% 10%;
   background-color: #71706d;
   position: relative;
 }
@@ -174,7 +200,7 @@ main .jumbotron {
 .portofolio {
   width: 100%;
   background-color: #71706d;
-  padding: 7% 0;
+  padding: 10% 0;
 }
 
 .portofolio h2 {
@@ -283,7 +309,7 @@ main .jumbotron {
 .services {
   width: 100%;
   background-color: #f0efef;
-  padding: 5% 2% 15% 2%;
+  padding: 9% 2% 15% 2%;
 }
 
 .services h2 {
@@ -420,7 +446,7 @@ footer .title-footer {
   width: 100%;
   min-height: 3px;
   border: none;
-  background-color: #DCE9F2;
+  background-color: #dce9f2;
 }
 
 .copyright {

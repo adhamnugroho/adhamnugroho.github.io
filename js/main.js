@@ -1,8 +1,9 @@
 // import single
-import { nextPorto, previousPorto, checklengthParagraphPorto, generateTahunSekarang } from "./function.js";
+import { nextPorto, previousPorto, checklengthParagraphPorto, generateTahunSekarang, hideUnhideNav, smoothScroll } from "./function.js";
 
 const leftNav = document.getElementById("nav-porto-left");
 const rightNav = document.getElementById("nav-porto-right");
+const toggler = document.getElementById("toggler");
 
 const intervalSlidePorto = setInterval(() => {
   nextPorto();
@@ -19,4 +20,12 @@ rightNav.addEventListener("click", () => {
 
 leftNav.addEventListener("click", () => {
   previousPorto();
+});
+
+toggler.addEventListener("click", () => {
+  hideUnhideNav();
+});
+
+$("header nav ul li a").on("click", function () {
+  smoothScroll();
 });
