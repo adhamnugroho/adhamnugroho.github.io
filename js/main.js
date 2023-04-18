@@ -4,6 +4,10 @@ import { nextPorto, previousPorto, checklengthParagraphPorto, generateTahunSekar
 const leftNav = document.getElementById("nav-porto-left");
 const rightNav = document.getElementById("nav-porto-right");
 
+const intervalSlidePorto = setInterval(() => {
+  nextPorto();
+}, 6000);
+
 $(document).ready(() => {
   checklengthParagraphPorto();
   generateTahunSekarang();
