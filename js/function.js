@@ -118,10 +118,10 @@ export function hideUnhideNav() {
   $(".fa-bars").toggle(100);
 }
 
-export function smoothScroll(event) {
-  event.preventDefault();
+export function smoothScroll(elemen, e) {
+  e.preventDefault();
 
-  const href = $(this).attr("href");
+  const href = $(elemen).attr("href");
   $("html, body").animate({ scrollTop: $(href).offset().top }, 800);
 }
 

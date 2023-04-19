@@ -26,6 +26,6 @@ toggler.addEventListener("click", () => {
   hideUnhideNav();
 });
 
-$("header nav ul li a").on("click", function (event) {
-  smoothScroll(event);
+$("header a").on("click", function (e) {
+  smoothScroll(this, e);
 });
