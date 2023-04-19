@@ -109,7 +109,10 @@ export function hideUnhideNav() {
     $(".fa-bars").toggle(100);
   } else if (lebarLayar <= 576) {
     const headerElement = document.querySelector("header");
+
     headerElement.classList.toggle("nav-open");
+    $(".fa-bars-staggered").toggle(100);
+    $(".fa-bars").toggle(100);
   }
 }
 
