@@ -122,6 +122,10 @@ main .jumbotron {
   right: 25%;
 }
 
+.text-jumbotron h2 {
+  text-transform: capitalize;
+}
+
 .text-jumbotron p {
   font-size: 1.2em;
   margin-top: 2%;
@@ -173,7 +177,7 @@ main .jumbotron {
   margin-top: 5%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  gap: 5px;
+  gap: 12px 5px;
 }
 
 .card-kiri img {
@@ -306,6 +310,10 @@ main .jumbotron {
   z-index: 3;
 }
 
+.expand-porto-btn {
+  display: none;
+}
+
 .services {
   width: 100%;
   background-color: #f0efef;
@@ -333,7 +341,7 @@ main .jumbotron {
   min-height: 400px;
 }
 
-.title {
+.flip-card .title {
   font-size: 1.8em;
   font-weight: 900;
   text-align: center;
@@ -364,7 +372,7 @@ main .jumbotron {
 
 .flip-card-back p:not(.title) {
   width: 80%;
-  margin: 2% auto 0 auto;
+  margin: 3% auto 0 auto;
   font-size: 1.2em;
   text-align: justify;
 }
@@ -457,4 +465,407 @@ footer .title-footer {
   font-size: 1.3em;
   font-weight: 600;
   text-transform: capitalize;
+}
+
+/* responsive breakpoints */
+
+/* Full HD+ */
+
+@media screen and (max-width: 1160px) {
+  .flip-card-back {
+    padding: 2%;
+  }
+
+  .flip-card-back .title {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .flip-card-back p:not(.title) {
+    margin-top: 5%;
+  }
+
+  footer .title-footer {
+    font-size: 1.8em;
+  }
+}
+
+/* tablet */
+
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 2em;
+  }
+
+  header a {
+    font-size: 1em;
+  }
+
+  .jumbotron .kotak-1 {
+    min-width: 200px;
+    height: 400px;
+  }
+
+  .text-jumbotron p {
+    font-size: 1em;
+  }
+
+  .jumbotron .kotak-2 {
+    min-width: 200px;
+    height: 400px;
+  }
+
+  .about-me .card-kiri h3 {
+    font-size: 1.2em;
+  }
+
+  .about-me .card-kiri p {
+    font-size: 1em;
+    margin-top: 5%;
+  }
+
+  .card-kiri .container-gambar {
+    margin-top: 8%;
+  }
+
+  .card-kiri img {
+    width: 40%;
+  }
+
+  /* rule based on attribute selector */
+  .card-kiri img[alt*="Logo PHPMyAdmin"] {
+    width: 80%;
+  }
+
+  .card-kanan {
+    max-width: 42%;
+  }
+
+  .container-slide-portofolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px 0;
+  }
+
+  .container-slide-portofolio .card-porto {
+    width: 65%;
+    max-height: 300px;
+  }
+
+  .banner-card-porto {
+    min-height: 200px;
+  }
+
+  .container-slide-portofolio .card-porto h3 {
+    margin-top: 5%;
+  }
+
+  .img-teknologi-porto {
+    width: 30%;
+  }
+
+  .item1 {
+    transform: translateX(0);
+    opacity: 1;
+    padding-bottom: 15%;
+  }
+
+  #item2 {
+    width: 65%;
+  }
+
+  .item3 {
+    transform: translateX(0);
+    opacity: 1;
+    padding-bottom: 15%;
+  }
+
+  .nav-porto {
+    display: none;
+    /* position: static; */
+  }
+
+  .expand-porto-btn {
+    display: inline-block;
+    width: 33%;
+    min-height: 50px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    padding: 2%;
+    background-color: #dce9f2;
+  }
+
+  .services {
+    padding-bottom: 20%;
+  }
+
+  .container-services {
+    margin: 5% auto;
+  }
+
+  .flip-card {
+    min-height: 300px;
+  }
+
+  .flip-card .title {
+    font-size: 1.4em;
+  }
+
+  .flip-card-back p:not(.title) {
+    margin-top: 5%;
+    text-align: left;
+    font-size: 1em;
+  }
+
+  footer .title-footer {
+    font-size: 1.3em;
+    margin: 0 5%;
+  }
+
+  .container-contact h5 {
+    font-size: 0.9em;
+  }
+
+  .container-image-contact img {
+    width: 65%;
+  }
+
+  .garis-batas-copyright {
+    min-height: 2px;
+  }
+
+  .copyright {
+    font-size: 0.75em;
+  }
+}
+
+/* handphone */
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  header {
+    -webkit-transition: min-height 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    transition: min-height 0.4s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+    min-height: 0;
+    overflow-y: hidden;
+  }
+
+  header.nav-open {
+    min-height: 250px;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    transform: translateX(0);
+    background-color: #fff;
+    border-top: 2px solid #71706d;
+    margin: 12% 0;
+    -webkit-transition: none;
+    transition: none;
+  }
+
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header li {
+    margin: 1% 0;
+    padding: 1% 0;
+    border-bottom: 2px solid #71706d;
+  }
+
+  header li a {
+    font-size: 0.95em;
+    margin-left: 1.5%;
+  }
+
+  header .humberger-menu {
+    justify-content: flex-start;
+  }
+
+  .jumbotron .kotak-1 {
+    min-width: 150px;
+  }
+
+  .jumbotron .kotak-2 {
+    min-width: 150px;
+  }
+
+  .about-me {
+    padding: 9% 5% 10% 5%;
+  }
+
+  .about-me .card-kiri {
+    max-width: 100%;
+  }
+
+  .about-me .card-kiri h3 {
+    width: 50%;
+    margin-top: 5%;
+  }
+
+  .about-me .card-kiri p {
+    width: 50%;
+  }
+
+  .card-kiri .container-gambar {
+    margin-top: 10%;
+  }
+
+  .card-kanan {
+    width: 50%;
+    top: 28%;
+  }
+
+  .services {
+    padding: 9% 2% 45% 2%;
+  }
+
+  .container-services {
+    margin: 9% auto 0 auto;
+    grid-template-areas:
+      "service1"
+      "service2"
+      "service3"
+      "service4";
+    gap: 5%;
+  }
+
+  .container-contact {
+    margin: 10% auto;
+    grid-template-columns: 1fr;
+    gap: 10% 0;
+  }
+
+  .container-contact h5 {
+    font-size: 1em;
+  }
+
+  .container-image-contact img {
+    width: 50%;
+  }
+}
+
+/* min-width Handphone */
+@media screen and (max-width: 350px) {
+  h1 {
+    font-size: 1.2em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  header .container-logo {
+    margin: 1%;
+  }
+
+  header.nav-open {
+    min-height: 170px;
+  }
+
+  header .humberger-menu {
+    margin: 1% 2% 0 0;
+  }
+
+  .humberger-menu > input {
+    width: 2em;
+    height: 2.1em;
+  }
+
+  .jumbotron .kotak-1 {
+    min-width: 100px;
+  }
+
+  .text-jumbotron p {
+    font-size: 0.8em;
+  }
+
+  .jumbotron .kotak-2 {
+    min-width: 100px;
+  }
+
+  .about-me .card-kiri h3 {
+    width: 55%;
+    font-size: 1em;
+  }
+
+  .about-me .card-kiri p {
+    width: 55%;
+    font-size: 0.8em;
+  }
+
+  .card-kiri .container-gambar {
+    margin-top: 5%;
+  }
+
+  .card-kanan {
+    max-width: 40%;
+    left: 53%;
+  }
+
+  .container-slide-portofolio .card-porto {
+    min-height: 380px;
+  }
+
+  .banner-card-porto {
+    min-height: 120px;
+  }
+
+  .container-slide-portofolio .card-porto h3 {
+    font-size: 0.98em;
+    margin-top: 10%;
+  }
+
+  .card-porto p {
+    font-size: 0.8em;
+    margin-top: 10%;
+  }
+
+  .img-teknologi-porto {
+    margin-top: 25%;
+    width: 43%;
+  }
+
+  .expand-porto-btn {
+    width: 40%;
+    font-size: 0.8em;
+    padding: 1%;
+  }
+
+  .services {
+    padding-bottom: 70%;
+  }
+
+  .flip-card .title {
+    font-size: 1.2em;
+  }
+
+  .flip-card-back p:not(.title) {
+    font-size: 0.85em;
+  }
+
+  footer .title-footer {
+    font-size: 1.1em;
+  }
+
+  .container-contact {
+    margin-bottom: 12%;
+  }
+
+  .container-contact h5 {
+    font-size: 0.75em;
+  }
+
+  .container-image-contact img {
+    width: 70%;
+  }
+
+  .copyright {
+    font-size: 0.55em;
+  }
 }
