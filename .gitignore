@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,macos,node,linux,git,microsoftoffice,composer,images,video
-# Edit at https://www.toptal.com/developers/gitignore?templates=windows,visualstudiocode,macos,node,linux,git,microsoftoffice,composer,images,video
+# Created by https://www.toptal.com/developers/gitignore/api/git,windows,linux,macos,visualstudiocode,node,microsoftoffice,composer
+# Edit at https://www.toptal.com/developers/gitignore?templates=git,windows,linux,macos,visualstudiocode,node,microsoftoffice,composer
 
 ### Composer ###
 composer.phar
@@ -233,24 +233,6 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-### Video ###
-*.3g2
-*.3gp
-*.asf
-*.asx
-*.avi
-*.flv
-*.mkv
-*.mov
-*.mp4
-*.mpg
-*.ogv
-*.rm
-*.swf
-*.vob
-*.wmv
-*.webm
-
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -296,4 +278,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,macos,node,linux,git,microsoftoffice,composer,images,video
+# End of https://www.toptal.com/developers/gitignore/api/git,windows,linux,macos,visualstudiocode,node,microsoftoffice,composer
