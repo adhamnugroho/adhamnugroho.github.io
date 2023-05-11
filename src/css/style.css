@@ -1,7 +1,5 @@
 /* Import */
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-@import url("./flip-card.css");
-@import url("./not_copy.css");
 
 /* Default style */
 *,
@@ -368,7 +366,6 @@ main .jumbotron {
   padding: 90% 0 10% 0;
 }
 
-
 .flip-card-back p:not(.title) {
   width: 80%;
   margin: 3% auto 0 auto;
@@ -396,6 +393,9 @@ main .jumbotron {
   width: 100%;
   background-color: #f0efef;
   display: flex;
+}
+
+.wave-downer-footer {
 }
 
 .width-upper-footer img {

@@ -16,7 +16,7 @@ module.exports = merge(config, {
   output: {
     path: path.resolve(__dirname, "dist-prod"),
     filename: "js/[name].[contenthash].js",
-    assetModuleFilename: "[path]/[name]-[contenthash].[ext]",
+    // assetModuleFilename: "img/[name]-[hash][ext]",
     clean: true,
   },
   optimization: {
@@ -54,10 +54,10 @@ module.exports = merge(config, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "[name]-[contenthash].css",
+      filename: "css/[name].[contenthash].css",
     }),
-    new PurgeCSSPlugin({
-      paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
-    }),
+    // new PurgeCSSPlugin({
+    //   paths: glob.sync(`${PATHS.src}/**/*`, { nodir: true }),
+    // }),
   ],
 });
