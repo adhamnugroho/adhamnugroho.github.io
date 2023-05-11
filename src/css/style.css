@@ -366,10 +366,6 @@ main .jumbotron {
   padding: 90% 0 10% 0;
 }
 
-.margin-top-10 {
-  /* margin-top: 1vh; */
-}
-
 .flip-card-back p:not(.title) {
   width: 80%;
   margin: 3% auto 0 auto;
@@ -397,6 +393,9 @@ main .jumbotron {
   width: 100%;
   background-color: #f0efef;
   display: flex;
+}
+
+.wave-downer-footer {
 }
 
 .width-upper-footer img {
