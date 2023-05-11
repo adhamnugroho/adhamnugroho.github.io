@@ -16,7 +16,7 @@ module.exports = merge(config, {
   output: {
     path: path.resolve(__dirname, "dist-dev"),
     filename: "js/[name].js",
-    assetModuleFilename: "[path]/[name][ext]",
+    assetModuleFilename: "[path][name][ext]",
     clean: true,
   },
   optimization: {

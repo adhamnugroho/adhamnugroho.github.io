@@ -1,5 +1,8 @@
 // import list
 import { nextPorto, previousPorto, checklengthParagraphPorto, generateTahunSekarang, hideUnhideNav, smoothScroll, expandViewPortoList, changeSizeHumbergerMenu } from "./function.js";
+import { style } from "./../css/style.css";
+import { flip_card } from "./../css/flip-card.css";
+import { not_copy } from "./../css/not_copy.css";
 
 const lebarLayar = $(window).width();
 
