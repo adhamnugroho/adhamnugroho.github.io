@@ -108,12 +108,11 @@ main .jumbotron {
   background-color: #f0efef;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 1fr minmax(100px, 2fr) 1fr;
 }
 
 .jumbotron .kotak-1 {
-  width: 40%;
-  min-width: 300px;
+  width: 79%;
   height: 500px;
   background-color: #ffb83d;
   border-radius: 0 10% 10% 0;
@@ -136,8 +135,7 @@ main .jumbotron {
 }
 
 .jumbotron .kotak-2 {
-  width: 30%;
-  min-width: 300px;
+  width: 79%;
   height: 500px;
   background-color: #eb8207;
   margin-top: 25%;
@@ -399,9 +397,6 @@ main .jumbotron {
   display: flex;
 }
 
-.wave-downer-footer {
-}
-
 .width-upper-footer img {
   width: 100%;
   height: 0;
@@ -505,7 +500,6 @@ footer .title-footer {
   }
 
   .jumbotron .kotak-1 {
-    min-width: 200px;
     height: 400px;
   }
 
@@ -514,7 +508,6 @@ footer .title-footer {
   }
 
   .jumbotron .kotak-2 {
-    min-width: 200px;
     height: 400px;
   }
 
@@ -688,14 +681,7 @@ footer .title-footer {
 
   header .humberger-menu {
     justify-content: flex-start;
-  }
-
-  .jumbotron .kotak-1 {
-    min-width: 150px;
-  }
-
-  .jumbotron .kotak-2 {
-    min-width: 150px;
+    margin: 1% 2% 0 0;
   }
 
   .about-me {
@@ -754,7 +740,7 @@ footer .title-footer {
 }
 
 /* min-width Handphone */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 360px) {
   h1 {
     font-size: 1.2em;
   }
@@ -772,7 +758,8 @@ footer .title-footer {
   }
 
   header .humberger-menu {
-    margin: 1% 2% 0 0;
+    width: 3%;
+    margin: 1% 4% 0 0;
   }
 
   .humberger-menu > input {
@@ -780,16 +767,8 @@ footer .title-footer {
     height: 2.1em;
   }
 
-  .jumbotron .kotak-1 {
-    min-width: 100px;
-  }
-
   .text-jumbotron p {
     font-size: 0.8em;
-  }
-
-  .jumbotron .kotak-2 {
-    min-width: 100px;
   }
 
   .about-me .card-kiri h3 {
